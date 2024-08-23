@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class complex{
+    private:
+    int r,i;
+    public:
+    //default constructor
+    complex(){
+        r=0;
+        i=0;
+    }
+    //argument constructor
+    complex(int m,int n){
+        r=m;
+        i=n;
+    }
+    //copy constructor
+    complex(complex &t){
+        r=t.r;
+        i=t.i;
+    }
+    void disp(){
+        cout<<r<<"+j"<<i<<endl;
+    }
+};
+int main(){
+    complex c1,c2(3,4),c3(5,6);
+    c1.disp();
+    c2.disp();
+    c3.disp();
+    complex c4=c2;
+    c4.disp();
+}
