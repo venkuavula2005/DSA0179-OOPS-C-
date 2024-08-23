@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class student{
+    private:
+    string name;
+    int roll_no;
+    char gender;
+    double marks;
+    public:
+    void get(){
+        cout<<"enter name:";
+        cin>>name;
+        cout<<"enter roll_no:";
+        cin>>roll_no;
+        cout<<"enter gender:";
+        cin>>gender;
+        cout<<"enter marks:";
+        cin>>marks;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<roll_no<<endl;
+        cout<<gender<<endl;
+        cout<<marks<<endl;
+    }
+};
+int main(){
+    student s;
+    s.get();
+    s.disp();
+}
