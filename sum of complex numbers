@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class complex{
+    private:
+    int r,i;
+    public:
+    void get(){
+        cout<<"enter real and imaginary number:";
+        cin>>r>>i;
+    }
+    void disp(){
+        cout<<r<<"+j"<<i<<endl;
+    }
+    complex add(complex c1,complex c2){
+        r=c1.r+c2.r;
+        i=c1.i+c2.i;
+    }
+};
+int main(){
+    complex c1,c2,c3;
+    c1.get();
+    c1.disp();
+    c2.get();
+    c2.disp();
+    c3.add(c1,c2);
+    c3.disp();
+}
