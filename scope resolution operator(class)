@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int a=20;
+class sample{
+    private:
+    int a;
+    public:
+    void get();
+    void disp();
+};
+void sample::get(){
+    cin>>a;
+}
+void sample::disp(){
+    cout<<a<<endl;
+    cout<<::a<<endl;
+}
+int main(){
+    sample s;
+    s.get();
+    s.disp();
+}
