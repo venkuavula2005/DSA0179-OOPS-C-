@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+void disp(int a);
+void disp(char a);
+void disp(double a);
+void disp(string a);
+int main(){
+    disp(23);
+    disp('a');
+    disp(2.3);
+    disp("welcome");
+}
+void disp(int i){
+    cout<<i<<endl;
+}
+void disp(char c){
+    cout<<c<<endl;
+}
+void disp(double f){
+    cout<<f<<endl;
+}
+void disp(string s){
+    cout<<s<<endl;
+}
