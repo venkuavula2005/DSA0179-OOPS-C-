@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class bank{
+    private:
+    string name;
+    int carno;
+    char colour;
+    double cost;
+    public:
+    bank(string s,int i,char c,double f){
+        name=s;
+        carno=i;
+        colour=c;
+        cost=f;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<carno<<endl;
+        cout<<colour<<endl;
+        cout<<cost<<endl;
+    }
+    ~bank(){
+        cout<<"object destroyed";
+    }
+};
+int main(){
+    bank b1("bmw",1234,'w',30000),b2("tata",234,'b',40000);
+    b1.disp();
+    b2.disp();
+}
