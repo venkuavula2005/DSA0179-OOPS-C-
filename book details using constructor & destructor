@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class book{
+    private:
+    string name;
+    int bookno;
+    char subject;
+    double cost;
+    public:
+    book(string s,int i,char c,double f){
+        name=s;
+        bookno=i;
+        subject=c;
+        cost=f;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<bookno<<endl;
+        cout<<subject<<endl;
+        cout<<cost<<endl;
+    }
+    ~book(){
+        cout<<"object destroyed";
+    }
+};
+int main(){
+    book b1("bhagavathgeetha",1234,'m',30000),b2("bible",234,'b',40000);
+    b1.disp();
+    b2.disp();
+}
