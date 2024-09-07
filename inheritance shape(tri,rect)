@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class shape{
+    public:
+    float h=2;
+    float w=4;
+};
+class rectangle:public shape{
+    private:
+    int l;
+    public:
+    void area(int l){
+        cout<<"area of rectangle= "<<(l*w)<<endl;
+    }
+    void perimeter(int l){
+        cout<<"perimeter of rectangle= "<<2*(l+w)<<endl;
+    }
+};
+class triangle:public shape{
+    private:
+    int a,b,c;
+    public:
+    void area(){
+        cout<<"area of triangle= "<<0.5*(w*h)<<endl;
+    }
+    void perimeter(int a,int b,int c){
+        cout<<"perimeter of triangle= "<<(a+b+c)<<endl;
+    }
+};
+int main(){
+    rectangle r;
+    r.area(5);
+    r.perimeter(4);
+    triangle t;
+    t.area();
+    t.perimeter(2,3,4);
+}
