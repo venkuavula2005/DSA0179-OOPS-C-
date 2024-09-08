@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class person{
+    public:
+    virtual void work(){
+        cout<<"person is working ";
+    }
+};
+class employee:public person{
+    public:
+    void work(){
+        cout<<"employee is doing his work "<<endl;
+    }
+};
+class manager:public person{
+    public:
+    void work(){
+        cout<<"manager is monitoring the team "<<endl;
+    }
+};
+int main(){
+    employee e;
+    person *ptr=&e;
+    ptr->work();
+    manager m;
+    ptr=&m;
+    ptr->work();
+}
