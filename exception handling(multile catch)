@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int i,j,index,a[]={1,2,3,4};
+    cin>>i>>j;
+    try{
+        if(j==0)
+        throw string("integer/0");
+        else
+        cout<<i/j;
+        if(index>0)
+        throw index;
+        else
+        cout<<a[index];
+    }
+    catch(string s){
+        cout<<s;
+    }
+    catch(int k){
+        cout<<"array index out of bounds";
+    }
+    cout<<"hai";
+}
