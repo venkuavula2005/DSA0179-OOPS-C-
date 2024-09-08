@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+class employee{
+    public:
+    char name[20];
+    float salary;
+    int id;
+};
+class manager:public employee{
+    private:
+    char dept[20];
+    int bonus;
+    public:
+    
+    void get(){
+        cout<<"enter manager details ";
+        cin>>name>>salary>>id>>dept;
+        bonus=(salary*0.3)+salary;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<salary<<endl;
+        cout<<id<<endl;
+        cout<<dept<<endl;
+        cout<<bonus<<endl;
+    }
+};
+class engineer:public employee{
+    private:
+    char spe[20];
+    int hours;
+    public:
+    void get(){
+        cout<<"enter engineer details ";
+        cin>>name>>salary>>id>>spe>>hours;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<salary<<endl;
+        cout<<id<<endl;
+        
+        cout<<spe<<endl;
+        cout<<hours<<endl;
+    }
+};
+int main(){
+    manager m;
+    m.get();
+    m.disp();
+    engineer e;
+    e.get();
+    e.disp();
+}
