@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class shape{
+    public:
+    virtual void area(){
+        cout<<"area of given shape";
+    }
+    virtual void volume(){
+        cout<<"volume of a given shape";
+    }
+};
+class sphere:public shape{
+    private:
+    int r=2;
+    float pi=3.14;
+    public:
+    void area(){
+        cout<<"area of sphere"<<4*pi*(r*r)<<endl;
+    }
+    void volume(){
+        cout<<"volume of sphere"<<4/3*pi*(r*r*r)<<endl;
+    }
+};
+class cylinder:public shape{
+    private:
+    int r=4,h=2;
+    float pi=3.14;
+    public:
+    void area(){
+        cout<<"area of cylinder= "<<2*pi*(r*r)+2*pi*r*h<<endl;
+    }
+    void volume(){
+        cout<<"volum of cylinder= "<<pi*r*r*h<<endl;
+    }
+};
+int main(){
+    sphere s;
+    shape *ptr=&s;
+    ptr->area();
+    ptr->volume();
+    cylinder c;
+    ptr=&c;
+    ptr->area();
+    ptr->volume();
+}
