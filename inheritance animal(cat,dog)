@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class animal{
+    public:
+    char name[20];
+    int age;
+    char species[20];
+};
+class dog:public animal{
+    private:
+    int weight;
+    char breed[20];
+    public:
+    void get(){
+        cout<<"enter dog details ";
+        cin>>name>>age>>species>>weight>>breed;
+    }
+    void disp(){
+        cout<<"name"<<name<<endl;
+        cout<<"age"<<age<<endl;
+        cout<<"species"<<species<<endl;
+        cout<<"weight"<<weight<<endl;
+        cout<<"breed"<<breed<<endl;
+    }
+};
+class cat:public animal{
+    private:
+    char colour[20];
+    char breed[30];
+    public:
+    void get(){
+        cout<<"enter cat details ";
+        cin>>name>>age>>species>>colour>>breed;
+    }
+    void disp(){
+        cout<<"name"<<name<<endl;
+        cout<<"age"<<age<<endl;
+        cout<<"species"<<species<<endl;
+        cout<<"colourt"<<colour<<endl;
+        cout<<"breed"<<breed<<endl;
+    }
+};
+int main(){
+    dog d;
+    d.get();
+    d.disp();
+    cat c;
+    c.get();
+    c.disp();
+}
