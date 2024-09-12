@@ -1,0 +1,9 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    string s1;
+    cin>>s1;
+    int len=s1.length();
+    cout<<len;
+}
