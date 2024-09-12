@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+class triangle{
+    private:
+    int b=2,h=4;
+    public:
+    void area(){
+        cout<<"area= "<<0.5*b*h<<endl;
+    }
+    void perimeter(int a,int b,int c){
+        cout<<"perimeter= "<<a+b+c;
+    }
+};
+int main(){
+    triangle t;
+    t.area();
+    t.perimeter(2,3,4);
+    return 0;
+}
