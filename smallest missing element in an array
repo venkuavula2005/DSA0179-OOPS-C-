@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int a[]={1,2,5,6,7,9};
+    int len=sizeof(a)/sizeof(a[0]);
+    int low=0,high=len-1;
+    int missing;
+    while(low<=high){
+        int mid=low+(high-low)/2;
+        if(a[mid]==mid+1){
+            low=mid+1;
+        }else{
+            high=mid-1;
+        }
+    }
+    missing=low+1;
+    cout<<"smallest missing element= "<<missing;
+}
