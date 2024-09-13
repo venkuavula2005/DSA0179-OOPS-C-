@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int i,j,n,k=0;
+    cin>>n;
+    for(i=0;i<=n;i++){
+        for(j=i;j<n;j++){
+            cout<<" ";
+        }
+        for(j=1;j<=i;j++){
+            k++;
+            cout<<k;
+        }
+        k--;
+        for(j=1;j<i;j++){
+            cout<<k;
+            k--;
+        }
+        cout<<endl;
+        k++;
+    }
+}
