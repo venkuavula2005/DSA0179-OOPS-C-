@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string s1;
+    cout<<"enter the string: ";
+    cin>>s1;
+    int length=0;
+    for(int i=s1.length()-1;i>=0;i--){
+        if(s1[i]!=' '){
+            length++;
+        }else if(length>0){
+            break;
+        }
+    }
+    cout<<"length of last string: "<<length;
+    return 0;
+}
