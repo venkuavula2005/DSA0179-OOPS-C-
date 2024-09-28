@@ -1,0 +1,10 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    string s1;
+    cout<<"enter the string ";
+    cin>>s1;
+    int count=s1.length();
+    cout<<count;
+}
