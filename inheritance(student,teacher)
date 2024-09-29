@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class person{
+    public:
+    string name;
+    int age;
+    char gender;
+};
+class student:public person{
+    private:
+    int roll_no;
+    string class_name;
+    public:
+    void get(){
+        cout<<"enter student details:\n";
+        cin>>name>>gender>>roll_no>>class_name;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<gender<<endl;
+        cout<<roll_no<<endl;
+        cout<<class_name<<endl;
+    }
+};
+class teacher:public person{
+    private:
+    string subject;
+    int salary;
+    public:
+    void get(){
+        cout<<"enter teacher details:\n";
+        cin>>name>>age>>gender>>subject>>salary;
+    }
+    void disp(){
+        cout<<name<<endl;
+        cout<<age<<endl;
+        cout<<gender<<endl;
+        cout<<subject<<endl;
+        cout<<salary<<endl;
+    }
+};
+int main(){
+    student s;
+    teacher t;
+    s.get();
+    s.disp();
+    t.get();
+    t.disp();
+    return 0;
+}
