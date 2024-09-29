@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class sample{
+    private:
+    int a;
+    public:
+    void get(){
+        cin>>a;
+    }
+    void operator --(){
+        a=--a;
+    }
+    void disp(){
+        cout<<a;
+    }
+};
+int main(){
+    sample s;
+    s.get();
+    --s;
+    s.disp();
+}
