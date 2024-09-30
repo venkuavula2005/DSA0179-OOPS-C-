@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string input="i am a good girl";
+    int wordcount=0;
+    for(char c:input){
+        if(isspace(c)){
+            wordcount++;
+        }
+    }
+    cout<<wordcount+1;
+}
