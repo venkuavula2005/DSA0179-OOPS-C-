@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,num,square;
+    cin>>n;
+    square=n*n;
+    num=n;
+    while(num>0){
+        if(num%10!=square%10){
+            cout<<n<<"is not automorphic number";
+            return 0;
+        }
+        num/=10;
+        square/=10;
+        cout<<n<<"is a automorphic number";
+    }
+    return 0;
+}
